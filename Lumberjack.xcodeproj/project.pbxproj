@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		0D5F2F341DEEBCF2002A17ED /* CocoaLumberjack-iOS-aggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0D5F2F371DEEBCF2002A17ED /* Build configuration list for PBXAggregateTarget "CocoaLumberjack-iOS-aggregate" */;
+			buildPhases = (
+				0D5F2F381DEEBCF5002A17ED /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "CocoaLumberjack-iOS-aggregate";
+			productName = "CocoaLumberjack-iOS-aggregate";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		0DF6CB661DD19CEE0077B606 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCB3185114EB418E001CFBEE /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18F3BF081A81D8B700692297 /* CocoaLumberjack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BCB5C619D4BB6E0096E784 /* CocoaLumberjack.swift */; };
@@ -1270,6 +1284,10 @@
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0800;
 				TargetAttributes = {
+					0D5F2F341DEEBCF2002A17ED = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					18F3BEF61A81D8B700692297 = {
 						LastSwiftMigration = 0800;
 					};
@@ -1350,6 +1368,7 @@
 				19EC14721B84D134000EC2E7 /* watchOSSwiftTest Extension */,
 				19406BE01BDBABFF001194DC /* tvOSSwiftTest */,
 				18F3BFF11A81E0C700692297 /* iOSLibStaticTest */,
+				0D5F2F341DEEBCF2002A17ED /* CocoaLumberjack-iOS-aggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -1476,6 +1495,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D5F2F381DEEBCF5002A17ED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nTARGET_NAME=\"CocoaLumberjack-iOS\"\nFMK_NAME=\"CocoaLumberjack\"\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${TARGET_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${TARGET_NAME}\" -sdk iphonesimulator clean build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\" #为了调试，可以不删除WRK_DIR！！\nopen \"${INSTALL_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18F3BF071A81D8B700692297 /* Sources */ = {
@@ -1773,6 +1808,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0D5F2F351DEEBCF2002A17ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0D5F2F361DEEBCF2002A17ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		18F3BF0D1A81D8B700692297 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2283,6 +2332,7 @@
 				INFOPLIST_FILE = "Framework/Lumberjack/CocoaLumberjack-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = Framework/Lumberjack/CocoaLumberjack.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deusty.CocoaLumberjack-iOS";
 				PRODUCT_NAME = CocoaLumberjack;
@@ -2308,6 +2358,7 @@
 				INFOPLIST_FILE = "Framework/Lumberjack/CocoaLumberjack-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = Framework/Lumberjack/CocoaLumberjack.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deusty.CocoaLumberjack-iOS";
 				PRODUCT_NAME = CocoaLumberjack;
@@ -2593,6 +2644,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D5F2F371DEEBCF2002A17ED /* Build configuration list for PBXAggregateTarget "CocoaLumberjack-iOS-aggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D5F2F351DEEBCF2002A17ED /* Debug */,
+				0D5F2F361DEEBCF2002A17ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		18F3BF0C1A81D8B700692297 /* Build configuration list for PBXNativeTarget "CocoaLumberjackSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
