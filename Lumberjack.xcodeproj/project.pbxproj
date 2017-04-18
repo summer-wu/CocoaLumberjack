@@ -21,6 +21,16 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0DF25C531EA5AC2000BCE0AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C521EA5AC2000BCE0AC /* AppDelegate.m */; };
+		0DF25C561EA5AC2000BCE0AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C551EA5AC2000BCE0AC /* main.m */; };
+		0DF25C591EA5AC2000BCE0AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C581EA5AC2000BCE0AC /* ViewController.m */; };
+		0DF25C5B1EA5AC2000BCE0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF25C5A1EA5AC2000BCE0AC /* Assets.xcassets */; };
+		0DF25C5E1EA5AC2000BCE0AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF25C5C1EA5AC2000BCE0AC /* Main.storyboard */; };
+		0DF25C6C1EA5AC3C00BCE0AC /* BeijingLogDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C651EA5AC3C00BCE0AC /* BeijingLogDateFormatter.m */; };
+		0DF25C6D1EA5AC3C00BCE0AC /* LogManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C671EA5AC3C00BCE0AC /* LogManager.m */; };
+		0DF25C6E1EA5AC3C00BCE0AC /* OTLogFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C691EA5AC3C00BCE0AC /* OTLogFileManager.m */; };
+		0DF25C6F1EA5AC3C00BCE0AC /* OTLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25C6B1EA5AC3C00BCE0AC /* OTLogFormatter.m */; };
+		0DF25C701EA5AC6600BCE0AC /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB3185114EB418E001CFBEE /* CocoaLumberjack.framework */; };
 		0DF6CB661DD19CEE0077B606 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DCB3185114EB418E001CFBEE /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		18F3BF081A81D8B700692297 /* CocoaLumberjack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BCB5C619D4BB6E0096E784 /* CocoaLumberjack.swift */; };
 		18F3BF0A1A81D8B700692297 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB3185114EB418E001CFBEE /* CocoaLumberjack.framework */; };
@@ -402,6 +412,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0DF25C4F1EA5AC2000BCE0AC /* cocoaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cocoaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DF25C511EA5AC2000BCE0AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0DF25C521EA5AC2000BCE0AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0DF25C551EA5AC2000BCE0AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0DF25C571EA5AC2000BCE0AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0DF25C581EA5AC2000BCE0AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0DF25C5A1EA5AC2000BCE0AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DF25C5D1EA5AC2000BCE0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DF25C5F1EA5AC2000BCE0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DF25C641EA5AC3C00BCE0AC /* BeijingLogDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeijingLogDateFormatter.h; sourceTree = "<group>"; };
+		0DF25C651EA5AC3C00BCE0AC /* BeijingLogDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeijingLogDateFormatter.m; sourceTree = "<group>"; };
+		0DF25C661EA5AC3C00BCE0AC /* LogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogManager.h; sourceTree = "<group>"; };
+		0DF25C671EA5AC3C00BCE0AC /* LogManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogManager.m; sourceTree = "<group>"; };
+		0DF25C681EA5AC3C00BCE0AC /* OTLogFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTLogFileManager.h; sourceTree = "<group>"; };
+		0DF25C691EA5AC3C00BCE0AC /* OTLogFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTLogFileManager.m; sourceTree = "<group>"; };
+		0DF25C6A1EA5AC3C00BCE0AC /* OTLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTLogFormatter.h; sourceTree = "<group>"; };
+		0DF25C6B1EA5AC3C00BCE0AC /* OTLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTLogFormatter.m; sourceTree = "<group>"; };
 		18F3BF0F1A81D8B700692297 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjackSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F3BF151A81D9A400692297 /* CocoaLumberjack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjack.h; sourceTree = "<group>"; };
 		18F3BF5F1A81DD2E00692297 /* iOSSwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -495,6 +522,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0DF25C4C1EA5AC2000BCE0AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DF25C701EA5AC6600BCE0AC /* CocoaLumberjack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18F3BF091A81D8B700692297 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -612,6 +647,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DF25C501EA5AC2000BCE0AC /* cocoaApp */ = {
+			isa = PBXGroup;
+			children = (
+				0DF25C631EA5AC3C00BCE0AC /* LogManager */,
+				0DF25C511EA5AC2000BCE0AC /* AppDelegate.h */,
+				0DF25C521EA5AC2000BCE0AC /* AppDelegate.m */,
+				0DF25C571EA5AC2000BCE0AC /* ViewController.h */,
+				0DF25C581EA5AC2000BCE0AC /* ViewController.m */,
+				0DF25C5A1EA5AC2000BCE0AC /* Assets.xcassets */,
+				0DF25C5C1EA5AC2000BCE0AC /* Main.storyboard */,
+				0DF25C5F1EA5AC2000BCE0AC /* Info.plist */,
+				0DF25C541EA5AC2000BCE0AC /* Supporting Files */,
+			);
+			path = cocoaApp;
+			sourceTree = "<group>";
+		};
+		0DF25C541EA5AC2000BCE0AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DF25C551EA5AC2000BCE0AC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0DF25C631EA5AC3C00BCE0AC /* LogManager */ = {
+			isa = PBXGroup;
+			children = (
+				0DF25C641EA5AC3C00BCE0AC /* BeijingLogDateFormatter.h */,
+				0DF25C651EA5AC3C00BCE0AC /* BeijingLogDateFormatter.m */,
+				0DF25C661EA5AC3C00BCE0AC /* LogManager.h */,
+				0DF25C671EA5AC3C00BCE0AC /* LogManager.m */,
+				0DF25C681EA5AC3C00BCE0AC /* OTLogFileManager.h */,
+				0DF25C691EA5AC3C00BCE0AC /* OTLogFileManager.m */,
+				0DF25C6A1EA5AC3C00BCE0AC /* OTLogFormatter.h */,
+				0DF25C6B1EA5AC3C00BCE0AC /* OTLogFormatter.m */,
+			);
+			path = LogManager;
+			sourceTree = "<group>";
+		};
 		18F3BF601A81DD2E00692297 /* iOSSwiftTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,6 +816,7 @@
 				19EC14771B84D135000EC2E7 /* watchOSSwiftTest Extension */,
 				19406BE21BDBABFF001194DC /* tvOSSwiftTest */,
 				18F3BFF31A81E0C800692297 /* iOSLibStaticTest */,
+				0DF25C501EA5AC2000BCE0AC /* cocoaApp */,
 				DCB3185314EB418E001CFBEE /* Frameworks */,
 				DCB3185214EB418E001CFBEE /* Products */,
 			);
@@ -767,6 +842,7 @@
 				19D90B261BBFA9DB00947169 /* CocoaLumberjack.framework */,
 				19D90B351BBFAA7500947169 /* CocoaLumberjackSwift.framework */,
 				19406BE11BDBABFF001194DC /* tvOSSwiftTest.app */,
+				0DF25C4F1EA5AC2000BCE0AC /* cocoaApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -977,6 +1053,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0DF25C4E1EA5AC2000BCE0AC /* cocoaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DF25C621EA5AC2000BCE0AC /* Build configuration list for PBXNativeTarget "cocoaApp" */;
+			buildPhases = (
+				0DF25C4B1EA5AC2000BCE0AC /* Sources */,
+				0DF25C4C1EA5AC2000BCE0AC /* Frameworks */,
+				0DF25C4D1EA5AC2000BCE0AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cocoaApp;
+			productName = cocoaApp;
+			productReference = 0DF25C4F1EA5AC2000BCE0AC /* cocoaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		18F3BEF61A81D8B700692297 /* CocoaLumberjackSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18F3BF0C1A81D8B700692297 /* Build configuration list for PBXNativeTarget "CocoaLumberjackSwift" */;
@@ -1288,6 +1381,10 @@
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
 					};
+					0DF25C4E1EA5AC2000BCE0AC = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
 					18F3BEF61A81D8B700692297 = {
 						LastSwiftMigration = 0800;
 					};
@@ -1369,11 +1466,21 @@
 				19406BE01BDBABFF001194DC /* tvOSSwiftTest */,
 				18F3BFF11A81E0C700692297 /* iOSLibStaticTest */,
 				0D5F2F341DEEBCF2002A17ED /* CocoaLumberjack-iOS-aggregate */,
+				0DF25C4E1EA5AC2000BCE0AC /* cocoaApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0DF25C4D1EA5AC2000BCE0AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DF25C5B1EA5AC2000BCE0AC /* Assets.xcassets in Resources */,
+				0DF25C5E1EA5AC2000BCE0AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18F3BF0B1A81D8B700692297 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1513,6 +1620,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0DF25C4B1EA5AC2000BCE0AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DF25C6C1EA5AC3C00BCE0AC /* BeijingLogDateFormatter.m in Sources */,
+				0DF25C591EA5AC2000BCE0AC /* ViewController.m in Sources */,
+				0DF25C561EA5AC2000BCE0AC /* main.m in Sources */,
+				0DF25C6D1EA5AC3C00BCE0AC /* LogManager.m in Sources */,
+				0DF25C6F1EA5AC3C00BCE0AC /* OTLogFormatter.m in Sources */,
+				0DF25C531EA5AC2000BCE0AC /* AppDelegate.m in Sources */,
+				0DF25C6E1EA5AC3C00BCE0AC /* OTLogFileManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18F3BF071A81D8B700692297 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1749,6 +1870,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0DF25C5C1EA5AC2000BCE0AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DF25C5D1EA5AC2000BCE0AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		18F3BFFE1A81E0C800692297 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1818,6 +1947,46 @@
 		0D5F2F361DEEBCF2002A17ED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0DF25C601EA5AC2000BCE0AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = cocoaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.summerwu.cocoaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0DF25C611EA5AC2000BCE0AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = cocoaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.summerwu.cocoaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2649,6 +2818,15 @@
 			buildConfigurations = (
 				0D5F2F351DEEBCF2002A17ED /* Debug */,
 				0D5F2F361DEEBCF2002A17ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0DF25C621EA5AC2000BCE0AC /* Build configuration list for PBXNativeTarget "cocoaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DF25C601EA5AC2000BCE0AC /* Debug */,
+				0DF25C611EA5AC2000BCE0AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
